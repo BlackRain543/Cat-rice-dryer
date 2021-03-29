@@ -1,0 +1,1270 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    system_hk32f030m.o(i.SetSysClock) refers to system_hk32f030m.o(i.SetSysClockToHSI_32M) for SetSysClockToHSI_32M
+    system_hk32f030m.o(i.SystemCoreClockUpdate) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_hk32f030m.o(i.SystemCoreClockUpdate) refers to system_hk32f030m.o(.data) for SystemCoreClock
+    system_hk32f030m.o(i.SystemCoreClockUpdate) refers to hk32f030m_rcc.o(.constdata) for AHBPrescTable
+    system_hk32f030m.o(i.SystemInit) refers to system_hk32f030m.o(i.SetSysClock) for SetSysClock
+    hk32f030m_it.o(i.SysTick_Handler) refers to delay.o(i.TimingDelay_Decrement) for TimingDelay_Decrement
+    beep.o(i.Beep_1s) refers to beep.o(i.Sound) for Sound
+    beep.o(i.Beep_1s) refers to delay.o(i.Delay_10us) for Delay_10us
+    beep.o(i.HKBEEP_Init) refers to hk32f030m_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    beep.o(i.HKBEEP_Init) refers to hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    beep.o(i.HKBEEP_Init) refers to hk32f030m_rcc.o(i.RCC_LSICmd) for RCC_LSICmd
+    beep.o(i.HKBEEP_Init) refers to hk32f030m_gpio.o(i.GPIO_Init) for GPIO_Init
+    beep.o(i.SetPrescaler) refers to hk32f030m_beep.o(i.BEEP_SetPrescaler) for BEEP_SetPrescaler
+    beep.o(i.Sound) refers to uidiv.o(.text) for __aeabi_uidivmod
+    beep.o(i.Sound) refers to hk32f030m_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    beep.o(i.Sound) refers to delay.o(i.Delay_10us) for Delay_10us
+    beep.o(i.Sound) refers to hk32f030m_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    beep.o(i.play_music) refers to memcpya.o(.text) for __aeabi_memcpy4
+    beep.o(i.play_music) refers to beep.o(i.Sound) for Sound
+    beep.o(i.play_music) refers to uidiv.o(.text) for __aeabi_uidivmod
+    beep.o(i.play_music) refers to beep.o(.constdata) for .constdata
+    usart.o(i.Uart_Receive) refers to hk32f030m_usart.o(i.USART_GetITStatus) for USART_GetITStatus
+    usart.o(i.Uart_Receive) refers to hk32f030m_usart.o(i.USART_ReceiveData) for USART_ReceiveData
+    usart.o(i.Uart_Receive) refers to mcu_api.o(i.uart_receive_input) for uart_receive_input
+    usart.o(i.Uart_Send) refers to hk32f030m_usart.o(i.USART_SendData) for USART_SendData
+    usart.o(i.Uart_Send) refers to hk32f030m_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    usart.o(i.Usart_Init) refers to hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    usart.o(i.Usart_Init) refers to hk32f030m_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    usart.o(i.Usart_Init) refers to hk32f030m_gpio.o(i.GPIO_PinAFConfig) for GPIO_PinAFConfig
+    usart.o(i.Usart_Init) refers to hk32f030m_gpio.o(i.GPIO_Init) for GPIO_Init
+    usart.o(i.Usart_Init) refers to hk32f030m_usart.o(i.USART_Init) for USART_Init
+    usart.o(i.Usart_Init) refers to hk32f030m_usart.o(i.USART_ITConfig) for USART_ITConfig
+    usart.o(i.Usart_Init) refers to hk32f030m_usart.o(i.USART_Cmd) for USART_Cmd
+    usart.o(i.fputc) refers to hk32f030m_usart.o(i.USART_SendData) for USART_SendData
+    usart.o(i.fputc) refers to hk32f030m_usart.o(i.USART_GetFlagStatus) for USART_GetFlagStatus
+    led.o(i.LED_Blink) refers to hk32f030m_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    led.o(i.LED_Blink) refers to delay.o(i.Delay_ms) for Delay_ms
+    led.o(i.LED_Blink) refers to hk32f030m_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    led.o(i.LED_GPIO_Init) refers to hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    led.o(i.LED_GPIO_Init) refers to hk32f030m_gpio.o(i.GPIO_Init) for GPIO_Init
+    led.o(i.LED_GPIO_Init) refers to hk32f030m_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    motor.o(i.M_GPIO_Init) refers to hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    motor.o(i.M_GPIO_Init) refers to hk32f030m_gpio.o(i.GPIO_Init) for GPIO_Init
+    motor.o(i.M_back) refers to hk32f030m_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    motor.o(i.M_back) refers to hk32f030m_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    motor.o(i.M_forward) refers to hk32f030m_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    motor.o(i.M_forward) refers to hk32f030m_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    motor.o(i.M_stop) refers to hk32f030m_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    mcu_api.o(i.mcu_dp_bool_update) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_dp_bool_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_dp_bool_update) refers to system.o(.data) for stop_update_flag
+    mcu_api.o(i.mcu_dp_enum_update) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_dp_enum_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_dp_enum_update) refers to system.o(.data) for stop_update_flag
+    mcu_api.o(i.mcu_dp_fault_update) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_dp_fault_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_dp_fault_update) refers to system.o(.data) for stop_update_flag
+    mcu_api.o(i.mcu_dp_raw_update) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_dp_raw_update) refers to system.o(i.set_wifi_uart_buffer) for set_wifi_uart_buffer
+    mcu_api.o(i.mcu_dp_raw_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_dp_raw_update) refers to system.o(.data) for stop_update_flag
+    mcu_api.o(i.mcu_dp_string_update) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_dp_string_update) refers to system.o(i.set_wifi_uart_buffer) for set_wifi_uart_buffer
+    mcu_api.o(i.mcu_dp_string_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_dp_string_update) refers to system.o(.data) for stop_update_flag
+    mcu_api.o(i.mcu_dp_value_update) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_dp_value_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_dp_value_update) refers to system.o(.data) for stop_update_flag
+    mcu_api.o(i.mcu_get_dp_download_value) refers to mcu_api.o(i.byte_to_int) for byte_to_int
+    mcu_api.o(i.mcu_get_reset_wifi_flag) refers to system.o(.data) for reset_wifi_flag
+    mcu_api.o(i.mcu_get_wifi_work_state) refers to system.o(.data) for wifi_work_state
+    mcu_api.o(i.mcu_get_wifimode_flag) refers to system.o(.data) for set_wifimode_flag
+    mcu_api.o(i.mcu_reset_wifi) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_reset_wifi) refers to system.o(.data) for reset_wifi_flag
+    mcu_api.o(i.mcu_set_wifi_mode) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    mcu_api.o(i.mcu_set_wifi_mode) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.mcu_set_wifi_mode) refers to system.o(.data) for set_wifimode_flag
+    mcu_api.o(i.mcu_start_wifitest) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    mcu_api.o(i.uart_receive_buff_input) refers to mcu_api.o(i.uart_receive_input) for uart_receive_input
+    mcu_api.o(i.uart_receive_input) refers to system.o(.data) for rx_buf_out
+    mcu_api.o(i.uart_receive_input) refers to system.o(.bss) for wifi_uart_rx_buf
+    mcu_api.o(i.wifi_protocol_init) refers to system.o(.bss) for wifi_uart_rx_buf
+    mcu_api.o(i.wifi_protocol_init) refers to system.o(.data) for rx_buf_in
+    mcu_api.o(i.wifi_uart_service) refers to system.o(i.take_byte_rxbuff) for take_byte_rxbuff
+    mcu_api.o(i.wifi_uart_service) refers to system.o(i.with_data_rxbuff) for with_data_rxbuff
+    mcu_api.o(i.wifi_uart_service) refers to system.o(i.get_check_sum) for get_check_sum
+    mcu_api.o(i.wifi_uart_service) refers to system.o(i.data_handle) for data_handle
+    mcu_api.o(i.wifi_uart_service) refers to mcu_api.o(i.my_memcpy) for my_memcpy
+    mcu_api.o(i.wifi_uart_service) refers to mcu_api.o(.data) for rx_in
+    mcu_api.o(i.wifi_uart_service) refers to system.o(.bss) for wifi_data_process_buf
+    protocol.o(i.all_data_update) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.all_data_update) refers to mcu_api.o(i.mcu_dp_value_update) for mcu_dp_value_update
+    protocol.o(i.all_data_update) refers to main.o(.data) for QuickFeed_State
+    protocol.o(i.dp_download_export_calibrate_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_export_calibrate_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.dp_download_factory_reset_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_factory_reset_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_meal_plan_handle) for dp_download_meal_plan_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_quick_feed_handle) for dp_download_quick_feed_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_manual_feed_handle) for dp_download_manual_feed_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_unit_handle) for dp_download_unit_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_slow_feed_handle) for dp_download_slow_feed_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_export_calibrate_handle) for dp_download_export_calibrate_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_weight_calibrate_handle) for dp_download_weight_calibrate_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_factory_reset_handle) for dp_download_factory_reset_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_voice_times_handle) for dp_download_voice_times_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_light_handle) for dp_download_light_handle
+    protocol.o(i.dp_download_handle) refers to protocol.o(i.dp_download_switch_handle) for dp_download_switch_handle
+    protocol.o(i.dp_download_light_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_light_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.dp_download_manual_feed_handle) refers to mcu_api.o(i.mcu_get_dp_download_value) for mcu_get_dp_download_value
+    protocol.o(i.dp_download_manual_feed_handle) refers to motor.o(i.M_forward) for M_forward
+    protocol.o(i.dp_download_manual_feed_handle) refers to delay.o(i.Delay_ms) for Delay_ms
+    protocol.o(i.dp_download_manual_feed_handle) refers to motor.o(i.M_stop) for M_stop
+    protocol.o(i.dp_download_manual_feed_handle) refers to mcu_api.o(i.mcu_dp_value_update) for mcu_dp_value_update
+    protocol.o(i.dp_download_meal_plan_handle) refers to mcu_api.o(i.mcu_dp_raw_update) for mcu_dp_raw_update
+    protocol.o(i.dp_download_quick_feed_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_quick_feed_handle) refers to led.o(i.LED_Blink) for LED_Blink
+    protocol.o(i.dp_download_quick_feed_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.dp_download_slow_feed_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_slow_feed_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.dp_download_switch_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_switch_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.dp_download_unit_handle) refers to mcu_api.o(i.mcu_get_dp_download_enum) for mcu_get_dp_download_enum
+    protocol.o(i.dp_download_unit_handle) refers to mcu_api.o(i.mcu_dp_enum_update) for mcu_dp_enum_update
+    protocol.o(i.dp_download_voice_times_handle) refers to mcu_api.o(i.mcu_get_dp_download_value) for mcu_get_dp_download_value
+    protocol.o(i.dp_download_voice_times_handle) refers to mcu_api.o(i.mcu_dp_value_update) for mcu_dp_value_update
+    protocol.o(i.dp_download_weight_calibrate_handle) refers to mcu_api.o(i.mcu_get_dp_download_bool) for mcu_get_dp_download_bool
+    protocol.o(i.dp_download_weight_calibrate_handle) refers to mcu_api.o(i.mcu_dp_bool_update) for mcu_dp_bool_update
+    protocol.o(i.uart_transmit_output) refers to usart.o(i.Uart_Send) for Uart_Send
+    system.o(i.data_handle) refers to protocol.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    system.o(i.data_handle) refers to system.o(i.heat_beat_check) for heat_beat_check
+    system.o(i.data_handle) refers to system.o(i.product_info_update) for product_info_update
+    system.o(i.data_handle) refers to system.o(i.get_mcu_wifi_mode) for get_mcu_wifi_mode
+    system.o(i.data_handle) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    system.o(i.data_handle) refers to system.o(i.data_point_handle) for data_point_handle
+    system.o(i.data_handle) refers to protocol.o(i.all_data_update) for all_data_update
+    system.o(i.data_handle) refers to protocol.o(i.wifi_test_result) for wifi_test_result
+    system.o(i.data_handle) refers to system.o(.bss) for wifi_data_process_buf
+    system.o(i.data_handle) refers to system.o(.data) for wifi_work_state
+    system.o(i.data_point_handle) refers to system.o(i.get_dowmload_dpid_index) for get_dowmload_dpid_index
+    system.o(i.data_point_handle) refers to protocol.o(i.dp_download_handle) for dp_download_handle
+    system.o(i.data_point_handle) refers to protocol.o(.constdata) for download_cmd
+    system.o(i.get_dowmload_dpid_index) refers to protocol.o(i.get_download_cmd_total) for get_download_cmd_total
+    system.o(i.get_dowmload_dpid_index) refers to protocol.o(.constdata) for download_cmd
+    system.o(i.get_mcu_wifi_mode) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    system.o(i.heat_beat_check) refers to system.o(i.set_wifi_uart_byte) for set_wifi_uart_byte
+    system.o(i.heat_beat_check) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    system.o(i.heat_beat_check) refers to system.o(.data) for mcu_reset_state
+    system.o(i.product_info_update) refers to mcu_api.o(i.my_strlen) for my_strlen
+    system.o(i.product_info_update) refers to system.o(i.set_wifi_uart_buffer) for set_wifi_uart_buffer
+    system.o(i.product_info_update) refers to system.o(i.wifi_uart_write_frame) for wifi_uart_write_frame
+    system.o(i.set_wifi_uart_buffer) refers to mcu_api.o(i.my_memcpy) for my_memcpy
+    system.o(i.set_wifi_uart_buffer) refers to system.o(.bss) for wifi_uart_tx_buf
+    system.o(i.set_wifi_uart_byte) refers to system.o(.bss) for wifi_uart_tx_buf
+    system.o(i.take_byte_rxbuff) refers to system.o(.data) for rx_buf_out
+    system.o(i.take_byte_rxbuff) refers to system.o(.bss) for wifi_uart_rx_buf
+    system.o(i.wifi_uart_write_data) refers to protocol.o(i.uart_transmit_output) for uart_transmit_output
+    system.o(i.wifi_uart_write_frame) refers to system.o(i.get_check_sum) for get_check_sum
+    system.o(i.wifi_uart_write_frame) refers to system.o(i.wifi_uart_write_data) for wifi_uart_write_data
+    system.o(i.wifi_uart_write_frame) refers to system.o(.bss) for wifi_uart_tx_buf
+    system.o(i.with_data_rxbuff) refers to system.o(.data) for rx_buf_in
+    delay.o(i.Delay_10us) refers to uidiv.o(.text) for __aeabi_uidivmod
+    delay.o(i.Delay_10us) refers to delay.o(i.SysTick_Config) for SysTick_Config
+    delay.o(i.Delay_10us) refers to system_hk32f030m.o(.data) for SystemCoreClock
+    delay.o(i.Delay_10us) refers to delay.o(.data) for TimingDelay
+    delay.o(i.Delay_ms) refers to uidiv.o(.text) for __aeabi_uidivmod
+    delay.o(i.Delay_ms) refers to delay.o(i.SysTick_Config) for SysTick_Config
+    delay.o(i.Delay_ms) refers to system_hk32f030m.o(.data) for SystemCoreClock
+    delay.o(i.Delay_ms) refers to delay.o(.data) for TimingDelay
+    delay.o(i.SysTick_Config) refers to delay.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    delay.o(i.TimingDelay_Decrement) refers to delay.o(.data) for TimingDelay
+    keil_startup_hk32f030m.o(RESET) refers to keil_startup_hk32f030m.o(STACK) for __initial_sp
+    keil_startup_hk32f030m.o(RESET) refers to keil_startup_hk32f030m.o(.text) for Reset_Handler
+    keil_startup_hk32f030m.o(RESET) refers to hk32f030m_it.o(i.NMI_Handler) for NMI_Handler
+    keil_startup_hk32f030m.o(RESET) refers to hk32f030m_it.o(i.HardFault_Handler) for HardFault_Handler
+    keil_startup_hk32f030m.o(RESET) refers to hk32f030m_it.o(i.SVC_Handler) for SVC_Handler
+    keil_startup_hk32f030m.o(RESET) refers to hk32f030m_it.o(i.PendSV_Handler) for PendSV_Handler
+    keil_startup_hk32f030m.o(RESET) refers to hk32f030m_it.o(i.SysTick_Handler) for SysTick_Handler
+    keil_startup_hk32f030m.o(.text) refers to system_hk32f030m.o(i.SystemInit) for SystemInit
+    keil_startup_hk32f030m.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    hk32f030m_adc.o(i.ADC_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    hk32f030m_flash.o(i.EEPROM_EraseByte) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.EEPROM_ProgramByte) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_EraseAllPages) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_ErasePage) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_DBGCLKConfig) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_EraseByte) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_IWDG_RLRConfig) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_LSILPConfig) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_ProgramData) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_RDPConfig) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_UserConfig) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_WRPConfig) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_OB_WriteUser) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_ProgramByte) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_ProgramHalfWord) refers to hk32f030m_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    hk32f030m_flash.o(i.FLASH_WaitForLastOperation) refers to hk32f030m_flash.o(i.FLASH_GetStatus) for FLASH_GetStatus
+    hk32f030m_gpio.o(i.GPIO_DeInit) refers to hk32f030m_rcc.o(i.RCC_AHBPeriphResetCmd) for RCC_AHBPeriphResetCmd
+    hk32f030m_gpio.o(i.GPIO_IOMUX_ChangePin) refers to protocol.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    hk32f030m_i2c.o(i.I2C_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    hk32f030m_pwr.o(i.PWR_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    hk32f030m_pwr.o(i.PWR_EnterDeepSleepMode) refers to hk32f030m_pwr.o(i.Sysclk_SwitchToLSI) for Sysclk_SwitchToLSI
+    hk32f030m_pwr.o(i.PWR_EnterDeepSleepMode) refers to hk32f030m_pwr.o(i.PWR_EnterSleepMode) for PWR_EnterSleepMode
+    hk32f030m_pwr.o(i.PWR_EnterStopMode) refers to hk32f030m_exti.o(i.EXTI_GetFlagStatus) for EXTI_GetFlagStatus
+    hk32f030m_pwr.o(i.PWR_EnterStopMode) refers to hk32f030m_exti.o(i.EXTI_ClearFlag) for EXTI_ClearFlag
+    hk32f030m_pwr.o(i.Sysclk_SwitchToLSI) refers to hk32f030m_rcc.o(i.RCC_LSICmd) for RCC_LSICmd
+    hk32f030m_pwr.o(i.Sysclk_SwitchToLSI) refers to hk32f030m_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    hk32f030m_pwr.o(i.Sysclk_SwitchToLSI) refers to hk32f030m_rcc.o(i.RCC_HSICmd) for RCC_HSICmd
+    hk32f030m_rcc.o(i.RCC_EXTCmd) refers to hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    hk32f030m_rcc.o(i.RCC_EXTCmd) refers to hk32f030m_gpio.o(i.GPIO_Init) for GPIO_Init
+    hk32f030m_rcc.o(i.RCC_GetClocksFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    hk32f030m_rcc.o(i.RCC_GetClocksFreq) refers to hk32f030m_rcc.o(.constdata) for AHBPrescTable
+    hk32f030m_rcc.o(i.RCC_WaitForStartUp) refers to hk32f030m_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    hk32f030m_spi.o(i.I2S_Init) refers to hk32f030m_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    hk32f030m_spi.o(i.I2S_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    hk32f030m_spi.o(i.SPI_I2S_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    hk32f030m_syscfg.o(i.SYSCFG_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    hk32f030m_tim.o(i.TIM_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    hk32f030m_tim.o(i.TIM_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    hk32f030m_tim.o(i.TIM_ETRClockMode1Config) refers to hk32f030m_tim.o(i.TIM_ETRConfig) for TIM_ETRConfig
+    hk32f030m_tim.o(i.TIM_ETRClockMode2Config) refers to hk32f030m_tim.o(i.TIM_ETRConfig) for TIM_ETRConfig
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TI1_Config) for TI1_Config
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TI2_Config) for TI2_Config
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TI3_Config) for TI3_Config
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TIM_SetIC3Prescaler) for TIM_SetIC3Prescaler
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TI4_Config) for TI4_Config
+    hk32f030m_tim.o(i.TIM_ICInit) refers to hk32f030m_tim.o(i.TIM_SetIC4Prescaler) for TIM_SetIC4Prescaler
+    hk32f030m_tim.o(i.TIM_ITRxExternalClockConfig) refers to hk32f030m_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    hk32f030m_tim.o(i.TIM_PWMIConfig) refers to hk32f030m_tim.o(i.TI1_Config) for TI1_Config
+    hk32f030m_tim.o(i.TIM_PWMIConfig) refers to hk32f030m_tim.o(i.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    hk32f030m_tim.o(i.TIM_PWMIConfig) refers to hk32f030m_tim.o(i.TI2_Config) for TI2_Config
+    hk32f030m_tim.o(i.TIM_PWMIConfig) refers to hk32f030m_tim.o(i.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    hk32f030m_tim.o(i.TIM_TIxExternalClockConfig) refers to hk32f030m_tim.o(i.TI2_Config) for TI2_Config
+    hk32f030m_tim.o(i.TIM_TIxExternalClockConfig) refers to hk32f030m_tim.o(i.TI1_Config) for TI1_Config
+    hk32f030m_tim.o(i.TIM_TIxExternalClockConfig) refers to hk32f030m_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    hk32f030m_usart.o(i.USART_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    hk32f030m_usart.o(i.USART_Init) refers to hk32f030m_rcc.o(i.RCC_GetClocksFreq) for RCC_GetClocksFreq
+    hk32f030m_usart.o(i.USART_Init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    hk32f030m_wwdg.o(i.WWDG_DeInit) refers to hk32f030m_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    main.o(i.main) refers to led.o(i.LED_GPIO_Init) for LED_GPIO_Init
+    main.o(i.main) refers to motor.o(i.M_GPIO_Init) for M_GPIO_Init
+    main.o(i.main) refers to beep.o(i.HKBEEP_Init) for HKBEEP_Init
+    main.o(i.main) refers to usart.o(i.Usart_Init) for Usart_Init
+    main.o(i.main) refers to mcu_api.o(i.wifi_protocol_init) for wifi_protocol_init
+    main.o(i.main) refers to mcu_api.o(i.wifi_uart_service) for wifi_uart_service
+    main.o(i.main) refers to usart.o(i.Uart_Receive) for Uart_Receive
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to keil_startup_hk32f030m.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to keil_startup_hk32f030m.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_hk32f030m.o(.rev16_text), (4 bytes).
+    Removing system_hk32f030m.o(.revsh_text), (4 bytes).
+    Removing system_hk32f030m.o(i.SystemCoreClockUpdate), (120 bytes).
+    Removing beep.o(.rev16_text), (4 bytes).
+    Removing beep.o(.revsh_text), (4 bytes).
+    Removing beep.o(i.Beep_1s), (40 bytes).
+    Removing beep.o(i.SetPrescaler), (12 bytes).
+    Removing beep.o(i.Sound), (64 bytes).
+    Removing beep.o(i.play_music), (172 bytes).
+    Removing beep.o(.constdata), (38 bytes).
+    Removing usart.o(.rev16_text), (4 bytes).
+    Removing usart.o(.revsh_text), (4 bytes).
+    Removing usart.o(i.fputc), (36 bytes).
+    Removing led.o(.rev16_text), (4 bytes).
+    Removing led.o(.revsh_text), (4 bytes).
+    Removing motor.o(.rev16_text), (4 bytes).
+    Removing motor.o(.revsh_text), (4 bytes).
+    Removing motor.o(i.M_back), (24 bytes).
+    Removing mcu_api.o(i.hex_to_bcd), (108 bytes).
+    Removing mcu_api.o(i.int_to_byte), (20 bytes).
+    Removing mcu_api.o(i.mcu_dp_fault_update), (200 bytes).
+    Removing mcu_api.o(i.mcu_dp_string_update), (112 bytes).
+    Removing mcu_api.o(i.mcu_get_reset_wifi_flag), (12 bytes).
+    Removing mcu_api.o(i.mcu_get_wifi_work_state), (12 bytes).
+    Removing mcu_api.o(i.mcu_get_wifimode_flag), (12 bytes).
+    Removing mcu_api.o(i.mcu_reset_wifi), (24 bytes).
+    Removing mcu_api.o(i.mcu_set_wifi_mode), (40 bytes).
+    Removing mcu_api.o(i.mcu_start_wifitest), (14 bytes).
+    Removing mcu_api.o(i.my_memset), (34 bytes).
+    Removing mcu_api.o(i.my_strcmp), (36 bytes).
+    Removing mcu_api.o(i.my_strcpy), (38 bytes).
+    Removing mcu_api.o(i.uart_receive_buff_input), (28 bytes).
+    Removing delay.o(.rev16_text), (4 bytes).
+    Removing delay.o(.revsh_text), (4 bytes).
+    Removing delay.o(i.Delay_10us), (68 bytes).
+    Removing keil_startup_hk32f030m.o(HEAP), (512 bytes).
+    Removing hk32f030m_adc.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_adc.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_adc.o(i.ADC_AWDWakeup_Cmd), (50 bytes).
+    Removing hk32f030m_adc.o(i.ADC_AnalogWatchdogCmd), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_AnalogWatchdogSingleChannelCmd), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_AnalogWatchdogSingleChannelConfig), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_AnalogWatchdogThresholdsConfig), (8 bytes).
+    Removing hk32f030m_adc.o(i.ADC_AutoPowerOffCmd), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_ChannelConfig), (20 bytes).
+    Removing hk32f030m_adc.o(i.ADC_ClearFlag), (4 bytes).
+    Removing hk32f030m_adc.o(i.ADC_ClearITPendingBit), (4 bytes).
+    Removing hk32f030m_adc.o(i.ADC_ClockModeConfig), (4 bytes).
+    Removing hk32f030m_adc.o(i.ADC_Cmd), (24 bytes).
+    Removing hk32f030m_adc.o(i.ADC_ContinuousModeCmd), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_DeInit), (32 bytes).
+    Removing hk32f030m_adc.o(i.ADC_Diff_Func), (48 bytes).
+    Removing hk32f030m_adc.o(i.ADC_DiscModeCmd), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_GetCalibrationFactor), (60 bytes).
+    Removing hk32f030m_adc.o(i.ADC_GetConversionValue), (8 bytes).
+    Removing hk32f030m_adc.o(i.ADC_GetFlagStatus), (48 bytes).
+    Removing hk32f030m_adc.o(i.ADC_GetITStatus), (34 bytes).
+    Removing hk32f030m_adc.o(i.ADC_ITConfig), (20 bytes).
+    Removing hk32f030m_adc.o(i.ADC_Init), (40 bytes).
+    Removing hk32f030m_adc.o(i.ADC_InterDelay_Func), (48 bytes).
+    Removing hk32f030m_adc.o(i.ADC_JitterCmd), (20 bytes).
+    Removing hk32f030m_adc.o(i.ADC_OverrunModeCmd), (28 bytes).
+    Removing hk32f030m_adc.o(i.ADC_StartOfConversion), (10 bytes).
+    Removing hk32f030m_adc.o(i.ADC_StopOfConversion), (10 bytes).
+    Removing hk32f030m_adc.o(i.ADC_StructInit), (14 bytes).
+    Removing hk32f030m_adc.o(i.ADC_VrefintCmd), (52 bytes).
+    Removing hk32f030m_adc.o(i.ADC_WaitModeCmd), (28 bytes).
+    Removing hk32f030m_awu.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_awu.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_awu.o(i.AWU_CLKConfig), (36 bytes).
+    Removing hk32f030m_awu.o(i.AWU_DeInit), (16 bytes).
+    Removing hk32f030m_awu.o(i.AWU_GetFlagStatus), (16 bytes).
+    Removing hk32f030m_awu.o(i.AWU_TimerCounterAndStart), (76 bytes).
+    Removing hk32f030m_beep.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_beep.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_ClockSelect), (36 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_Cmd), (64 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_DeInit), (40 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_Init), (140 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_ReadBeepStatus), (28 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_SetPrescaler), (32 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_SetTRGOPrescaler), (32 bytes).
+    Removing hk32f030m_beep.o(i.BEEP_TRGOCmd), (64 bytes).
+    Removing hk32f030m_crc.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_crc.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_crc.o(i.CRC_CalcBlockCRC), (36 bytes).
+    Removing hk32f030m_crc.o(i.CRC_CalcCRC), (16 bytes).
+    Removing hk32f030m_crc.o(i.CRC_DeInit), (28 bytes).
+    Removing hk32f030m_crc.o(i.CRC_GetCRC), (12 bytes).
+    Removing hk32f030m_crc.o(i.CRC_GetIDRegister), (12 bytes).
+    Removing hk32f030m_crc.o(i.CRC_ResetDR), (20 bytes).
+    Removing hk32f030m_crc.o(i.CRC_ReverseInputDataSelect), (32 bytes).
+    Removing hk32f030m_crc.o(i.CRC_ReverseOutputDataCmd), (36 bytes).
+    Removing hk32f030m_crc.o(i.CRC_SetIDRegister), (12 bytes).
+    Removing hk32f030m_crc.o(i.CRC_SetInitRegister), (12 bytes).
+    Removing hk32f030m_dbgmcu.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_dbgmcu.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_dbgmcu.o(i.DBGMCU_APB1PeriphConfig), (32 bytes).
+    Removing hk32f030m_dbgmcu.o(i.DBGMCU_Config), (32 bytes).
+    Removing hk32f030m_dbgmcu.o(i.DBGMCU_GetDEVID), (16 bytes).
+    Removing hk32f030m_dbgmcu.o(i.DBGMCU_GetREVID), (12 bytes).
+    Removing hk32f030m_exti.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_exti.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_ClearFlag), (12 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_ClearITPendingBit), (12 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_DeInit), (24 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_GenerateSWInterrupt), (16 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_GetFlagStatus), (28 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_GetITStatus), (40 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_Init), (136 bytes).
+    Removing hk32f030m_exti.o(i.EXTI_StructInit), (16 bytes).
+    Removing hk32f030m_flash.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_flash.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_flash.o(i.EEPROM_EraseByte), (80 bytes).
+    Removing hk32f030m_flash.o(i.EEPROM_ProgramByte), (68 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_ClearFlag), (12 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_EraseAllPages), (72 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_ErasePage), (76 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_GetFlagStatus), (28 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_GetStatus), (44 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_ITConfig), (32 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_Lock), (20 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_DBGCLKConfig), (156 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_EraseByte), (76 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_GetRDP), (28 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_GetUser), (16 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_GetWRP), (12 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_IWDG_RLRConfig), (192 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_LSILPConfig), (156 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_Lock), (20 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_ProgramData), (72 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_RDPConfig), (192 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_Unlock), (40 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_UserConfig), (196 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_WRPConfig), (284 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_OB_WriteUser), (76 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_ProgramByte), (68 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_ProgramHalfWord), (68 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_SetLatency), (28 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_Unlock), (36 bytes).
+    Removing hk32f030m_flash.o(i.FLASH_WaitForLastOperation), (40 bytes).
+    Removing hk32f030m_flash.o(i.Sys_GetDevice64BitUID), (20 bytes).
+    Removing hk32f030m_gpio.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_gpio.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_DeInit), (120 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_IOMUX_ChangePin), (244 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_IOMUX_PinAFConfig), (152 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_IOMUX_SetTIM2CN1_Source), (12 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_PinLockConfig), (34 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_ReadInputData), (8 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_ReadInputDataBit), (20 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_ReadOutputData), (8 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_ReadOutputDataBit), (20 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_StructInit), (24 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_Toggle), (8 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_Write), (4 bytes).
+    Removing hk32f030m_gpio.o(i.GPIO_WriteBit), (12 bytes).
+    Removing hk32f030m_i2c.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_i2c.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_10BitAddressHeaderCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_10BitAddressingModeCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_AcknowledgeConfig), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_AutoEndCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_CalculatePEC), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ClearFlag), (4 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ClearITPendingBit), (4 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ClockTimeoutCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_Cmd), (24 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_DeInit), (36 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_DualAddressCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ExtendedClockTimeoutCmd), (26 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GeneralCallCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GenerateSTART), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GenerateSTOP), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GetAddressMatched), (14 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GetFlagStatus), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GetITStatus), (78 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GetPEC), (8 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_GetTransferDirection), (30 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ITConfig), (20 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_IdleClockTimeoutCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_Init), (108 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_MasterRequestConfig), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_NumberOfBytesConfig), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_OwnAddress2Config), (36 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_PECRequestCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ReadRegister), (22 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ReceiveData), (8 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_ReloadCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_SMBusAlertCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_SendData), (4 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_SlaveAddressConfig), (20 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_SlaveByteControlCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_SoftwareResetCmd), (20 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_StopModeCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_StretchClockCmd), (28 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_StructInit), (24 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_TimeoutAConfig), (20 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_TimeoutBConfig), (32 bytes).
+    Removing hk32f030m_i2c.o(i.I2C_TransferHandling), (44 bytes).
+    Removing hk32f030m_iwdg.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_iwdg.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_Enable), (16 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_GetFlagStatus), (28 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_ReloadCounter), (16 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_SetPrescaler), (12 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_SetReload), (12 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_SetWindowValue), (12 bytes).
+    Removing hk32f030m_iwdg.o(i.IWDG_WriteAccessCmd), (12 bytes).
+    Removing hk32f030m_misc.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_misc.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_misc.o(i.NVIC_Init), (112 bytes).
+    Removing hk32f030m_misc.o(i.NVIC_SystemLPConfig), (32 bytes).
+    Removing hk32f030m_misc.o(i.SysTick_CLKSourceConfig), (36 bytes).
+    Removing hk32f030m_pwr.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_pwr.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_pwr.o(i.PWR_DeInit), (22 bytes).
+    Removing hk32f030m_pwr.o(i.PWR_EnterDeepSleepMode), (16 bytes).
+    Removing hk32f030m_pwr.o(i.PWR_EnterSleepMode), (32 bytes).
+    Removing hk32f030m_pwr.o(i.PWR_EnterStopMode), (112 bytes).
+    Removing hk32f030m_pwr.o(i.PWR_SetLDO_RefVolToADC), (36 bytes).
+    Removing hk32f030m_pwr.o(i.Sysclk_SwitchToLSI), (140 bytes).
+    Removing hk32f030m_rcc.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_rcc.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_ADCCLKConfig), (76 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_AHBPeriphResetCmd), (32 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_APB1PeriphResetCmd), (32 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_APB2PeriphResetCmd), (32 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_AdjustHSICalibrationValue), (32 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_ClearFlag), (20 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_ClockSecuritySystemCmd), (40 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_DeInit), (52 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_EXTCmd), (108 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_GetFlagStatus), (56 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_GetITStatus), (28 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_GetSYSCLKSource), (16 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_HCLKConfig), (32 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_HSICmd), (36 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_I2CCLKConfig), (28 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_ITConfig), (32 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_MCOConfig), (36 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_PCLKConfig), (36 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_SYSCLKConfig), (28 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_USARTCLKConfig), (28 bytes).
+    Removing hk32f030m_rcc.o(i.RCC_WaitForStartUp), (64 bytes).
+    Removing hk32f030m_spi.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_spi.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_spi.o(i.I2S_Cmd), (32 bytes).
+    Removing hk32f030m_spi.o(i.I2S_Init), (232 bytes).
+    Removing hk32f030m_spi.o(i.I2S_StructInit), (20 bytes).
+    Removing hk32f030m_spi.o(i.SPI_BiDirectionalLineConfig), (32 bytes).
+    Removing hk32f030m_spi.o(i.SPI_CRCLengthConfig), (20 bytes).
+    Removing hk32f030m_spi.o(i.SPI_CalculateCRC), (32 bytes).
+    Removing hk32f030m_spi.o(i.SPI_Cmd), (28 bytes).
+    Removing hk32f030m_spi.o(i.SPI_DataSizeConfig), (28 bytes).
+    Removing hk32f030m_spi.o(i.SPI_GetCRC), (20 bytes).
+    Removing hk32f030m_spi.o(i.SPI_GetCRCPolynomial), (8 bytes).
+    Removing hk32f030m_spi.o(i.SPI_GetReceptionFIFOStatus), (12 bytes).
+    Removing hk32f030m_spi.o(i.SPI_GetTransmissionFIFOStatus), (12 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_ClearFlag), (8 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_DeInit), (32 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_GetFlagStatus), (20 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_GetITStatus), (56 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_ITConfig), (38 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_ReceiveData16), (8 bytes).
+    Removing hk32f030m_spi.o(i.SPI_I2S_SendData16), (4 bytes).
+    Removing hk32f030m_spi.o(i.SPI_Init), (96 bytes).
+    Removing hk32f030m_spi.o(i.SPI_NSSInternalSoftwareConfig), (32 bytes).
+    Removing hk32f030m_spi.o(i.SPI_NSSPulseModeCmd), (28 bytes).
+    Removing hk32f030m_spi.o(i.SPI_ReceiveData8), (12 bytes).
+    Removing hk32f030m_spi.o(i.SPI_RxFIFOThresholdConfig), (20 bytes).
+    Removing hk32f030m_spi.o(i.SPI_SSOutputCmd), (28 bytes).
+    Removing hk32f030m_spi.o(i.SPI_SendData8), (10 bytes).
+    Removing hk32f030m_spi.o(i.SPI_StructInit), (30 bytes).
+    Removing hk32f030m_spi.o(i.SPI_TIModeCmd), (28 bytes).
+    Removing hk32f030m_spi.o(i.SPI_TransmitCRC), (12 bytes).
+    Removing hk32f030m_syscfg.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_syscfg.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_syscfg.o(i.SYSCFG_DeInit), (20 bytes).
+    Removing hk32f030m_syscfg.o(i.SYSCFG_EXTILineConfig), (64 bytes).
+    Removing hk32f030m_syscfg.o(i.SYSCFG_Lockup_Tim1BreakConfig), (36 bytes).
+    Removing hk32f030m_syscfg.o(i.SYSCFG_MemoryRemapConfig), (40 bytes).
+    Removing hk32f030m_tim.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_tim.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_tim.o(i.TI1_Config), (60 bytes).
+    Removing hk32f030m_tim.o(i.TI2_Config), (80 bytes).
+    Removing hk32f030m_tim.o(i.TI3_Config), (76 bytes).
+    Removing hk32f030m_tim.o(i.TI4_Config), (84 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ARRPreloadConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_BDTRConfig), (30 bytes).
+    Removing hk32f030m_tim.o(i.TIM_BDTRStructInit), (18 bytes).
+    Removing hk32f030m_tim.o(i.TIM_CCPreloadControl), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_CCxCmd), (34 bytes).
+    Removing hk32f030m_tim.o(i.TIM_CCxNCmd), (34 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ClearFlag), (8 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ClearITPendingBit), (8 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ClearOC1Ref), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ClearOC2Ref), (22 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ClearOC3Ref), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ClearOC4Ref), (22 bytes).
+    Removing hk32f030m_tim.o(i.TIM_Cmd), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_CounterModeConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_CtrlPWMOutputs), (26 bytes).
+    Removing hk32f030m_tim.o(i.TIM_DeInit), (88 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ETRClockMode1Config), (52 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ETRClockMode2Config), (34 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ETRConfig), (26 bytes).
+    Removing hk32f030m_tim.o(i.TIM_EncoderInterfaceConfig), (72 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ForcedOC1Config), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ForcedOC2Config), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ForcedOC3Config), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ForcedOC4Config), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GenerateEvent), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetCapture1), (6 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetCapture2), (6 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetCapture3), (6 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetCapture4), (6 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetCounter), (6 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetFlagStatus), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetITStatus), (38 bytes).
+    Removing hk32f030m_tim.o(i.TIM_GetPrescaler), (8 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ICInit), (112 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ICStructInit), (18 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ITConfig), (26 bytes).
+    Removing hk32f030m_tim.o(i.TIM_ITRxExternalClockConfig), (24 bytes).
+    Removing hk32f030m_tim.o(i.TIM_InternalClockConfig), (16 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC1FastConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC1Init), (120 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC1NPolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC1PolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC1PreloadConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC2FastConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC2Init), (168 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC2NPolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC2PolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC2PreloadConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC3FastConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC3Init), (160 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC3NPolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC3PolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC3PreloadConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC4FastConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC4Init), (120 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC4PolarityConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OC4PreloadConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_OCStructInit), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_PWMIConfig), (124 bytes).
+    Removing hk32f030m_tim.o(i.TIM_PrescalerConfig), (6 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectCOM), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectHallSensor), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectInputTrigger), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectMasterSlaveMode), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectOCREFClear), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectOCxM), (86 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectOnePulseMode), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectOutputTrigger), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SelectSlaveMode), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetAutoreload), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetClockDivision), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetCompare1), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetCompare2), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetCompare3), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetCompare4), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetCounter), (4 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetIC1Prescaler), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetIC2Prescaler), (24 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetIC3Prescaler), (20 bytes).
+    Removing hk32f030m_tim.o(i.TIM_SetIC4Prescaler), (24 bytes).
+    Removing hk32f030m_tim.o(i.TIM_TIxExternalClockConfig), (58 bytes).
+    Removing hk32f030m_tim.o(i.TIM_TimeBaseInit), (84 bytes).
+    Removing hk32f030m_tim.o(i.TIM_TimeBaseStructInit), (18 bytes).
+    Removing hk32f030m_tim.o(i.TIM_UpdateDisableConfig), (28 bytes).
+    Removing hk32f030m_tim.o(i.TIM_UpdateRequestConfig), (28 bytes).
+    Removing hk32f030m_usart.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_usart.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_usart.o(i.USART_AddressDetectionConfig), (16 bytes).
+    Removing hk32f030m_usart.o(i.USART_AutoBaudRateCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_AutoBaudRateConfig), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_ClearFlag), (4 bytes).
+    Removing hk32f030m_usart.o(i.USART_ClearITPendingBit), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_ClockInit), (36 bytes).
+    Removing hk32f030m_usart.o(i.USART_ClockStructInit), (12 bytes).
+    Removing hk32f030m_usart.o(i.USART_DECmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_DEPolarityConfig), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_DataInvCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_DeInit), (36 bytes).
+    Removing hk32f030m_usart.o(i.USART_DirectionModeCmd), (20 bytes).
+    Removing hk32f030m_usart.o(i.USART_HalfDuplexCmd), (24 bytes).
+    Removing hk32f030m_usart.o(i.USART_InvPinCmd), (20 bytes).
+    Removing hk32f030m_usart.o(i.USART_IrDACmd), (24 bytes).
+    Removing hk32f030m_usart.o(i.USART_IrDAConfig), (16 bytes).
+    Removing hk32f030m_usart.o(i.USART_LINBreakDetectLengthConfig), (16 bytes).
+    Removing hk32f030m_usart.o(i.USART_LINCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_MSBFirstCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_MuteModeCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_MuteModeWakeUpConfig), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_OneBitMethodCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_OverSampling8Cmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_OverrunDetectionConfig), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_ReceiverTimeOutCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_RequestCmd), (20 bytes).
+    Removing hk32f030m_usart.o(i.USART_STOPModeCmd), (24 bytes).
+    Removing hk32f030m_usart.o(i.USART_SWAPPinCmd), (28 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetAddress), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetAutoRetryCount), (20 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetBlockLength), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetDEAssertionTime), (20 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetDEDeassertionTime), (20 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetGuardTime), (16 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetPrescaler), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_SetReceiverTimeOut), (16 bytes).
+    Removing hk32f030m_usart.o(i.USART_SmartCardCmd), (24 bytes).
+    Removing hk32f030m_usart.o(i.USART_SmartCardNACKCmd), (24 bytes).
+    Removing hk32f030m_usart.o(i.USART_StopModeWakeUpSourceConfig), (18 bytes).
+    Removing hk32f030m_usart.o(i.USART_StructInit), (24 bytes).
+    Removing hk32f030m_wwdg.o(.rev16_text), (4 bytes).
+    Removing hk32f030m_wwdg.o(.revsh_text), (4 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_ClearFlag), (12 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_DeInit), (22 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_Enable), (16 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_EnableIT), (20 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_GetFlagStatus), (24 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_SetCounter), (16 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_SetPrescaler), (32 bytes).
+    Removing hk32f030m_wwdg.o(i.WWDG_SetWindowValue), (40 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+
+428 unused section(s) (total 14708 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ..\HK32F030M\CMSIS\HK32F030M\Source\ARM\KEIL_Startup_hk32f030m.s 0x00000000   Number         0  keil_startup_hk32f030m.o ABSOLUTE
+    ..\HK32F030M\CMSIS\HK32F030M\Source\system_hk32f030m.c 0x00000000   Number         0  system_hk32f030m.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_adc.c 0x00000000   Number         0  hk32f030m_adc.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_awu.c 0x00000000   Number         0  hk32f030m_awu.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_beep.c 0x00000000   Number         0  hk32f030m_beep.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_crc.c 0x00000000   Number         0  hk32f030m_crc.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_dbgmcu.c 0x00000000   Number         0  hk32f030m_dbgmcu.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_exti.c 0x00000000   Number         0  hk32f030m_exti.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_flash.c 0x00000000   Number         0  hk32f030m_flash.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_gpio.c 0x00000000   Number         0  hk32f030m_gpio.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_i2c.c 0x00000000   Number         0  hk32f030m_i2c.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_iwdg.c 0x00000000   Number         0  hk32f030m_iwdg.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_misc.c 0x00000000   Number         0  hk32f030m_misc.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_pwr.c 0x00000000   Number         0  hk32f030m_pwr.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_rcc.c 0x00000000   Number         0  hk32f030m_rcc.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_spi.c 0x00000000   Number         0  hk32f030m_spi.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_syscfg.c 0x00000000   Number         0  hk32f030m_syscfg.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_tim.c 0x00000000   Number         0  hk32f030m_tim.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_usart.c 0x00000000   Number         0  hk32f030m_usart.o ABSOLUTE
+    ..\HK32F030M\HK32F030M_Lib\src\hk32f030m_wwdg.c 0x00000000   Number         0  hk32f030m_wwdg.o ABSOLUTE
+    ..\HK32F030M_Project\src\hk32f030m_it.c  0x00000000   Number         0  hk32f030m_it.o ABSOLUTE
+    ..\\HK32F030M\\CMSIS\\HK32F030M\\Source\\system_hk32f030m.c 0x00000000   Number         0  system_hk32f030m.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_adc.c 0x00000000   Number         0  hk32f030m_adc.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_awu.c 0x00000000   Number         0  hk32f030m_awu.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_beep.c 0x00000000   Number         0  hk32f030m_beep.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_crc.c 0x00000000   Number         0  hk32f030m_crc.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_dbgmcu.c 0x00000000   Number         0  hk32f030m_dbgmcu.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_exti.c 0x00000000   Number         0  hk32f030m_exti.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_flash.c 0x00000000   Number         0  hk32f030m_flash.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_gpio.c 0x00000000   Number         0  hk32f030m_gpio.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_i2c.c 0x00000000   Number         0  hk32f030m_i2c.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_iwdg.c 0x00000000   Number         0  hk32f030m_iwdg.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_misc.c 0x00000000   Number         0  hk32f030m_misc.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_pwr.c 0x00000000   Number         0  hk32f030m_pwr.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_rcc.c 0x00000000   Number         0  hk32f030m_rcc.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_spi.c 0x00000000   Number         0  hk32f030m_spi.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_syscfg.c 0x00000000   Number         0  hk32f030m_syscfg.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_tim.c 0x00000000   Number         0  hk32f030m_tim.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_usart.c 0x00000000   Number         0  hk32f030m_usart.o ABSOLUTE
+    ..\\HK32F030M\\HK32F030M_Lib\\src\\hk32f030m_wwdg.c 0x00000000   Number         0  hk32f030m_wwdg.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main\\main.c                             0x00000000   Number         0  main.o ABSOLUTE
+    main\main.c                              0x00000000   Number         0  main.o ABSOLUTE
+    src\\beep.c                              0x00000000   Number         0  beep.o ABSOLUTE
+    src\\delay.c                             0x00000000   Number         0  delay.o ABSOLUTE
+    src\\led.c                               0x00000000   Number         0  led.o ABSOLUTE
+    src\\motor.c                             0x00000000   Number         0  motor.o ABSOLUTE
+    src\\usart.c                             0x00000000   Number         0  usart.o ABSOLUTE
+    src\beep.c                               0x00000000   Number         0  beep.o ABSOLUTE
+    src\delay.c                              0x00000000   Number         0  delay.o ABSOLUTE
+    src\led.c                                0x00000000   Number         0  led.o ABSOLUTE
+    src\mcu_api.c                            0x00000000   Number         0  mcu_api.o ABSOLUTE
+    src\motor.c                              0x00000000   Number         0  motor.o ABSOLUTE
+    src\protocol.c                           0x00000000   Number         0  protocol.o ABSOLUTE
+    src\system.c                             0x00000000   Number         0  system.o ABSOLUTE
+    src\usart.c                              0x00000000   Number         0  usart.o ABSOLUTE
+    RESET                                    0x08000000   Section      192  keil_startup_hk32f030m.o(RESET)
+    .ARM.Collect$$$$00000000                 0x080000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x080000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x080000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x080000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x080000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x080000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x080000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x080000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x080000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x080000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x080000d4   Section       28  keil_startup_hk32f030m.o(.text)
+    .text                                    0x080000f0   Section        0  uidiv.o(.text)
+    .text                                    0x0800011c   Section       36  init.o(.text)
+    i.Delay_ms                               0x08000140   Section        0  delay.o(i.Delay_ms)
+    i.GPIO_Init                              0x08000180   Section        0  hk32f030m_gpio.o(i.GPIO_Init)
+    i.GPIO_PinAFConfig                       0x08000226   Section        0  hk32f030m_gpio.o(i.GPIO_PinAFConfig)
+    i.GPIO_ResetBits                         0x0800026a   Section        0  hk32f030m_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x0800026e   Section        0  hk32f030m_gpio.o(i.GPIO_SetBits)
+    i.HKBEEP_Init                            0x08000274   Section        0  beep.o(i.HKBEEP_Init)
+    i.HardFault_Handler                      0x080002c4   Section        0  hk32f030m_it.o(i.HardFault_Handler)
+    i.LED_Blink                              0x080002c8   Section        0  led.o(i.LED_Blink)
+    i.LED_GPIO_Init                          0x08000310   Section        0  led.o(i.LED_GPIO_Init)
+    i.M_GPIO_Init                            0x0800033c   Section        0  motor.o(i.M_GPIO_Init)
+    i.M_forward                              0x08000364   Section        0  motor.o(i.M_forward)
+    i.M_stop                                 0x0800037c   Section        0  motor.o(i.M_stop)
+    i.NMI_Handler                            0x0800038c   Section        0  hk32f030m_it.o(i.NMI_Handler)
+    i.NVIC_SetPriority                       0x08000390   Section        0  delay.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x08000391   Thumb Code   110  delay.o(i.NVIC_SetPriority)
+    i.PendSV_Handler                         0x08000408   Section        0  hk32f030m_it.o(i.PendSV_Handler)
+    i.RCC_AHBPeriphClockCmd                  0x0800040c   Section        0  hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd)
+    i.RCC_APB1PeriphClockCmd                 0x0800042c   Section        0  hk32f030m_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB2PeriphClockCmd                 0x0800044c   Section        0  hk32f030m_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_GetClocksFreq                      0x0800046c   Section        0  hk32f030m_rcc.o(i.RCC_GetClocksFreq)
+    i.RCC_LSICmd                             0x08000598   Section        0  hk32f030m_rcc.o(i.RCC_LSICmd)
+    i.SVC_Handler                            0x080005bc   Section        0  hk32f030m_it.o(i.SVC_Handler)
+    i.SetSysClock                            0x080005c0   Section        0  system_hk32f030m.o(i.SetSysClock)
+    SetSysClock                              0x080005c1   Thumb Code    70  system_hk32f030m.o(i.SetSysClock)
+    i.SetSysClockToHSI_32M                   0x08000614   Section        0  system_hk32f030m.o(i.SetSysClockToHSI_32M)
+    SetSysClockToHSI_32M                     0x08000615   Thumb Code   220  system_hk32f030m.o(i.SetSysClockToHSI_32M)
+    i.SysTick_Config                         0x080006fc   Section        0  delay.o(i.SysTick_Config)
+    SysTick_Config                           0x080006fd   Thumb Code    46  delay.o(i.SysTick_Config)
+    i.SysTick_Handler                        0x08000734   Section        0  hk32f030m_it.o(i.SysTick_Handler)
+    i.SystemInit                             0x0800073c   Section        0  system_hk32f030m.o(i.SystemInit)
+    i.TimingDelay_Decrement                  0x08000780   Section        0  delay.o(i.TimingDelay_Decrement)
+    i.USART_Cmd                              0x08000798   Section        0  hk32f030m_usart.o(i.USART_Cmd)
+    i.USART_GetFlagStatus                    0x080007b0   Section        0  hk32f030m_usart.o(i.USART_GetFlagStatus)
+    i.USART_GetITStatus                      0x080007c4   Section        0  hk32f030m_usart.o(i.USART_GetITStatus)
+    i.USART_ITConfig                         0x08000812   Section        0  hk32f030m_usart.o(i.USART_ITConfig)
+    i.USART_Init                             0x08000854   Section        0  hk32f030m_usart.o(i.USART_Init)
+    i.USART_ReceiveData                      0x0800092c   Section        0  hk32f030m_usart.o(i.USART_ReceiveData)
+    i.USART_SendData                         0x08000936   Section        0  hk32f030m_usart.o(i.USART_SendData)
+    i.Uart_Receive                           0x08000940   Section        0  usart.o(i.Uart_Receive)
+    i.Uart_Send                              0x08000968   Section        0  usart.o(i.Uart_Send)
+    i.Usart_Init                             0x08000988   Section        0  usart.o(i.Usart_Init)
+    i.__ARM_common_switch8                   0x08000a28   Section        0  protocol.o(i.__ARM_common_switch8)
+    i.__scatterload_copy                     0x08000a44   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000a52   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000a54   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.all_data_update                        0x08000a64   Section        0  protocol.o(i.all_data_update)
+    i.byte_to_int                            0x08000a84   Section        0  mcu_api.o(i.byte_to_int)
+    i.data_handle                            0x08000aa0   Section        0  system.o(i.data_handle)
+    i.data_point_handle                      0x08000b7c   Section        0  system.o(i.data_point_handle)
+    data_point_handle                        0x08000b7d   Thumb Code    60  system.o(i.data_point_handle)
+    i.dp_download_export_calibrate_handle    0x08000bbc   Section        0  protocol.o(i.dp_download_export_calibrate_handle)
+    dp_download_export_calibrate_handle      0x08000bbd   Thumb Code    36  protocol.o(i.dp_download_export_calibrate_handle)
+    i.dp_download_factory_reset_handle       0x08000be0   Section        0  protocol.o(i.dp_download_factory_reset_handle)
+    dp_download_factory_reset_handle         0x08000be1   Thumb Code    36  protocol.o(i.dp_download_factory_reset_handle)
+    i.dp_download_handle                     0x08000c04   Section        0  protocol.o(i.dp_download_handle)
+    i.dp_download_light_handle               0x08000cb6   Section        0  protocol.o(i.dp_download_light_handle)
+    dp_download_light_handle                 0x08000cb7   Thumb Code    36  protocol.o(i.dp_download_light_handle)
+    i.dp_download_manual_feed_handle         0x08000cda   Section        0  protocol.o(i.dp_download_manual_feed_handle)
+    dp_download_manual_feed_handle           0x08000cdb   Thumb Code    60  protocol.o(i.dp_download_manual_feed_handle)
+    i.dp_download_meal_plan_handle           0x08000d16   Section        0  protocol.o(i.dp_download_meal_plan_handle)
+    dp_download_meal_plan_handle             0x08000d17   Thumb Code    28  protocol.o(i.dp_download_meal_plan_handle)
+    i.dp_download_quick_feed_handle          0x08000d32   Section        0  protocol.o(i.dp_download_quick_feed_handle)
+    dp_download_quick_feed_handle            0x08000d33   Thumb Code    62  protocol.o(i.dp_download_quick_feed_handle)
+    i.dp_download_slow_feed_handle           0x08000d70   Section        0  protocol.o(i.dp_download_slow_feed_handle)
+    dp_download_slow_feed_handle             0x08000d71   Thumb Code    36  protocol.o(i.dp_download_slow_feed_handle)
+    i.dp_download_switch_handle              0x08000d94   Section        0  protocol.o(i.dp_download_switch_handle)
+    dp_download_switch_handle                0x08000d95   Thumb Code    36  protocol.o(i.dp_download_switch_handle)
+    i.dp_download_unit_handle                0x08000db8   Section        0  protocol.o(i.dp_download_unit_handle)
+    dp_download_unit_handle                  0x08000db9   Thumb Code    60  protocol.o(i.dp_download_unit_handle)
+    i.dp_download_voice_times_handle         0x08000df4   Section        0  protocol.o(i.dp_download_voice_times_handle)
+    dp_download_voice_times_handle           0x08000df5   Thumb Code    36  protocol.o(i.dp_download_voice_times_handle)
+    i.dp_download_weight_calibrate_handle    0x08000e18   Section        0  protocol.o(i.dp_download_weight_calibrate_handle)
+    dp_download_weight_calibrate_handle      0x08000e19   Thumb Code    36  protocol.o(i.dp_download_weight_calibrate_handle)
+    i.get_check_sum                          0x08000e3c   Section        0  system.o(i.get_check_sum)
+    i.get_dowmload_dpid_index                0x08000e58   Section        0  system.o(i.get_dowmload_dpid_index)
+    get_dowmload_dpid_index                  0x08000e59   Thumb Code    40  system.o(i.get_dowmload_dpid_index)
+    i.get_download_cmd_total                 0x08000e84   Section        0  protocol.o(i.get_download_cmd_total)
+    i.get_mcu_wifi_mode                      0x08000e88   Section        0  system.o(i.get_mcu_wifi_mode)
+    get_mcu_wifi_mode                        0x08000e89   Thumb Code    16  system.o(i.get_mcu_wifi_mode)
+    i.heat_beat_check                        0x08000e98   Section        0  system.o(i.heat_beat_check)
+    heat_beat_check                          0x08000e99   Thumb Code    52  system.o(i.heat_beat_check)
+    i.main                                   0x08000ed0   Section        0  main.o(i.main)
+    i.mcu_dp_bool_update                     0x08000ef0   Section        0  mcu_api.o(i.mcu_dp_bool_update)
+    i.mcu_dp_enum_update                     0x08000f58   Section        0  mcu_api.o(i.mcu_dp_enum_update)
+    i.mcu_dp_raw_update                      0x08000fb0   Section        0  mcu_api.o(i.mcu_dp_raw_update)
+    i.mcu_dp_value_update                    0x08001020   Section        0  mcu_api.o(i.mcu_dp_value_update)
+    i.mcu_get_dp_download_bool               0x08001098   Section        0  mcu_api.o(i.mcu_get_dp_download_bool)
+    i.mcu_get_dp_download_enum               0x0800109e   Section        0  mcu_api.o(i.mcu_get_dp_download_enum)
+    i.mcu_get_dp_download_value              0x080010a4   Section        0  mcu_api.o(i.mcu_get_dp_download_value)
+    i.my_memcpy                              0x080010b2   Section        0  mcu_api.o(i.my_memcpy)
+    i.my_strlen                              0x080010fe   Section        0  mcu_api.o(i.my_strlen)
+    i.product_info_update                    0x0800111c   Section        0  system.o(i.product_info_update)
+    product_info_update                      0x0800111d   Thumb Code   156  system.o(i.product_info_update)
+    i.set_wifi_uart_buffer                   0x080011f4   Section        0  system.o(i.set_wifi_uart_buffer)
+    i.set_wifi_uart_byte                     0x08001218   Section        0  system.o(i.set_wifi_uart_byte)
+    i.take_byte_rxbuff                       0x08001228   Section        0  system.o(i.take_byte_rxbuff)
+    i.uart_receive_input                     0x08001264   Section        0  mcu_api.o(i.uart_receive_input)
+    i.uart_transmit_output                   0x080012bc   Section        0  protocol.o(i.uart_transmit_output)
+    i.wifi_protocol_init                     0x080012c8   Section        0  mcu_api.o(i.wifi_protocol_init)
+    i.wifi_test_result                       0x080012f4   Section        0  protocol.o(i.wifi_test_result)
+    i.wifi_uart_service                      0x08001300   Section        0  mcu_api.o(i.wifi_uart_service)
+    i.wifi_uart_write_data                   0x080013f0   Section        0  system.o(i.wifi_uart_write_data)
+    wifi_uart_write_data                     0x080013f1   Thumb Code    40  system.o(i.wifi_uart_write_data)
+    i.wifi_uart_write_frame                  0x08001418   Section        0  system.o(i.wifi_uart_write_frame)
+    i.with_data_rxbuff                       0x0800145c   Section        0  system.o(i.with_data_rxbuff)
+    .constdata                               0x08001478   Section       40  protocol.o(.constdata)
+    .constdata                               0x080014a0   Section       40  hk32f030m_rcc.o(.constdata)
+    .data                                    0x20000000   Section        4  system_hk32f030m.o(.data)
+    .data                                    0x20000004   Section        2  mcu_api.o(.data)
+    rx_in                                    0x20000004   Data           2  mcu_api.o(.data)
+    .data                                    0x20000008   Section       13  system.o(.data)
+    mcu_reset_state                          0x20000014   Data           1  system.o(.data)
+    .data                                    0x20000018   Section        4  delay.o(.data)
+    TimingDelay                              0x20000018   Data           4  delay.o(.data)
+    .data                                    0x2000001c   Section        2  main.o(.data)
+    .bss                                     0x20000020   Section      109  system.o(.bss)
+    STACK                                    0x20000090   Section      512  keil_startup_hk32f030m.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000000c0   Number         0  keil_startup_hk32f030m.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  keil_startup_hk32f030m.o(RESET)
+    __Vectors_End                            0x080000c0   Data           0  keil_startup_hk32f030m.o(RESET)
+    __main                                   0x080000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x080000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x080000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x080000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x080000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x080000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x080000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x080000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x080000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x080000d5   Thumb Code     8  keil_startup_hk32f030m.o(.text)
+    ADC1_IRQHandler                          0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI0_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI11_IRQHandler                        0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI1_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI2_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI3_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI4_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI5_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI6_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    EXTI7_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    FLASH_IRQHandler                         0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    I2C1_IRQHandler                          0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    RCC_IRQHandler                           0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    SPI1_IRQHandler                          0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    TIM1_BRK_IRQHandler                      0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    TIM1_CC_IRQHandler                       0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    TIM1_UP_TRG_COM_IRQHandler               0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    TIM2_IRQHandler                          0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    TIM6_IRQHandler                          0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    USART1_IRQHandler                        0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    WWDG_IRQHandler                          0x080000e7   Thumb Code     0  keil_startup_hk32f030m.o(.text)
+    __aeabi_uidiv                            0x080000f1   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x080000f1   Thumb Code    44  uidiv.o(.text)
+    __scatterload                            0x0800011d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0800011d   Thumb Code     0  init.o(.text)
+    Delay_ms                                 0x08000141   Thumb Code    52  delay.o(i.Delay_ms)
+    GPIO_Init                                0x08000181   Thumb Code   166  hk32f030m_gpio.o(i.GPIO_Init)
+    GPIO_PinAFConfig                         0x08000227   Thumb Code    68  hk32f030m_gpio.o(i.GPIO_PinAFConfig)
+    GPIO_ResetBits                           0x0800026b   Thumb Code     4  hk32f030m_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x0800026f   Thumb Code     4  hk32f030m_gpio.o(i.GPIO_SetBits)
+    HKBEEP_Init                              0x08000275   Thumb Code    70  beep.o(i.HKBEEP_Init)
+    HardFault_Handler                        0x080002c5   Thumb Code     4  hk32f030m_it.o(i.HardFault_Handler)
+    LED_Blink                                0x080002c9   Thumb Code    68  led.o(i.LED_Blink)
+    LED_GPIO_Init                            0x08000311   Thumb Code    40  led.o(i.LED_GPIO_Init)
+    M_GPIO_Init                              0x0800033d   Thumb Code    36  motor.o(i.M_GPIO_Init)
+    M_forward                                0x08000365   Thumb Code    20  motor.o(i.M_forward)
+    M_stop                                   0x0800037d   Thumb Code    12  motor.o(i.M_stop)
+    NMI_Handler                              0x0800038d   Thumb Code     2  hk32f030m_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x08000409   Thumb Code     2  hk32f030m_it.o(i.PendSV_Handler)
+    RCC_AHBPeriphClockCmd                    0x0800040d   Thumb Code    28  hk32f030m_rcc.o(i.RCC_AHBPeriphClockCmd)
+    RCC_APB1PeriphClockCmd                   0x0800042d   Thumb Code    28  hk32f030m_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB2PeriphClockCmd                   0x0800044d   Thumb Code    28  hk32f030m_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_GetClocksFreq                        0x0800046d   Thumb Code   272  hk32f030m_rcc.o(i.RCC_GetClocksFreq)
+    RCC_LSICmd                               0x08000599   Thumb Code    32  hk32f030m_rcc.o(i.RCC_LSICmd)
+    SVC_Handler                              0x080005bd   Thumb Code     2  hk32f030m_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08000735   Thumb Code     8  hk32f030m_it.o(i.SysTick_Handler)
+    SystemInit                               0x0800073d   Thumb Code    54  system_hk32f030m.o(i.SystemInit)
+    TimingDelay_Decrement                    0x08000781   Thumb Code    20  delay.o(i.TimingDelay_Decrement)
+    USART_Cmd                                0x08000799   Thumb Code    24  hk32f030m_usart.o(i.USART_Cmd)
+    USART_GetFlagStatus                      0x080007b1   Thumb Code    20  hk32f030m_usart.o(i.USART_GetFlagStatus)
+    USART_GetITStatus                        0x080007c5   Thumb Code    78  hk32f030m_usart.o(i.USART_GetITStatus)
+    USART_ITConfig                           0x08000813   Thumb Code    66  hk32f030m_usart.o(i.USART_ITConfig)
+    USART_Init                               0x08000855   Thumb Code   204  hk32f030m_usart.o(i.USART_Init)
+    USART_ReceiveData                        0x0800092d   Thumb Code    10  hk32f030m_usart.o(i.USART_ReceiveData)
+    USART_SendData                           0x08000937   Thumb Code     8  hk32f030m_usart.o(i.USART_SendData)
+    Uart_Receive                             0x08000941   Thumb Code    30  usart.o(i.Uart_Receive)
+    Uart_Send                                0x08000969   Thumb Code    28  usart.o(i.Uart_Send)
+    Usart_Init                               0x08000989   Thumb Code   146  usart.o(i.Usart_Init)
+    __ARM_common_switch8                     0x08000a29   Thumb Code    28  protocol.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x08000a45   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000a53   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000a55   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    all_data_update                          0x08000a65   Thumb Code    24  protocol.o(i.all_data_update)
+    byte_to_int                              0x08000a85   Thumb Code    26  mcu_api.o(i.byte_to_int)
+    data_handle                              0x08000aa1   Thumb Code   202  system.o(i.data_handle)
+    dp_download_handle                       0x08000c05   Thumb Code   178  protocol.o(i.dp_download_handle)
+    get_check_sum                            0x08000e3d   Thumb Code    28  system.o(i.get_check_sum)
+    get_download_cmd_total                   0x08000e85   Thumb Code     4  protocol.o(i.get_download_cmd_total)
+    main                                     0x08000ed1   Thumb Code    32  main.o(i.main)
+    mcu_dp_bool_update                       0x08000ef1   Thumb Code    98  mcu_api.o(i.mcu_dp_bool_update)
+    mcu_dp_enum_update                       0x08000f59   Thumb Code    82  mcu_api.o(i.mcu_dp_enum_update)
+    mcu_dp_raw_update                        0x08000fb1   Thumb Code   106  mcu_api.o(i.mcu_dp_raw_update)
+    mcu_dp_value_update                      0x08001021   Thumb Code   116  mcu_api.o(i.mcu_dp_value_update)
+    mcu_get_dp_download_bool                 0x08001099   Thumb Code     6  mcu_api.o(i.mcu_get_dp_download_bool)
+    mcu_get_dp_download_enum                 0x0800109f   Thumb Code     6  mcu_api.o(i.mcu_get_dp_download_enum)
+    mcu_get_dp_download_value                0x080010a5   Thumb Code    14  mcu_api.o(i.mcu_get_dp_download_value)
+    my_memcpy                                0x080010b3   Thumb Code    76  mcu_api.o(i.my_memcpy)
+    my_strlen                                0x080010ff   Thumb Code    28  mcu_api.o(i.my_strlen)
+    set_wifi_uart_buffer                     0x080011f5   Thumb Code    30  system.o(i.set_wifi_uart_buffer)
+    set_wifi_uart_byte                       0x08001219   Thumb Code    12  system.o(i.set_wifi_uart_byte)
+    take_byte_rxbuff                         0x08001229   Thumb Code    46  system.o(i.take_byte_rxbuff)
+    uart_receive_input                       0x08001265   Thumb Code    74  mcu_api.o(i.uart_receive_input)
+    uart_transmit_output                     0x080012bd   Thumb Code    12  protocol.o(i.uart_transmit_output)
+    wifi_protocol_init                       0x080012c9   Thumb Code    24  mcu_api.o(i.wifi_protocol_init)
+    wifi_test_result                         0x080012f5   Thumb Code    12  protocol.o(i.wifi_test_result)
+    wifi_uart_service                        0x08001301   Thumb Code   232  mcu_api.o(i.wifi_uart_service)
+    wifi_uart_write_frame                    0x08001419   Thumb Code    64  system.o(i.wifi_uart_write_frame)
+    with_data_rxbuff                         0x0800145d   Thumb Code    20  system.o(i.with_data_rxbuff)
+    download_cmd                             0x08001478   Data          40  protocol.o(.constdata)
+    AHBPrescTable                            0x080014a0   Data          32  hk32f030m_rcc.o(.constdata)
+    APBPrescTable                            0x080014c0   Data           8  hk32f030m_rcc.o(.constdata)
+    Region$$Table$$Base                      0x080014c8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080014e8   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_hk32f030m.o(.data)
+    rx_buf_in                                0x20000008   Data           4  system.o(.data)
+    rx_buf_out                               0x2000000c   Data           4  system.o(.data)
+    stop_update_flag                         0x20000010   Data           1  system.o(.data)
+    reset_wifi_flag                          0x20000011   Data           1  system.o(.data)
+    set_wifimode_flag                        0x20000012   Data           1  system.o(.data)
+    wifi_work_state                          0x20000013   Data           1  system.o(.data)
+    QuickFeed_State                          0x2000001c   Data           1  main.o(.data)
+    ManualFeed_State                         0x2000001d   Data           1  main.o(.data)
+    wifi_data_process_buf                    0x20000020   Data          31  system.o(.bss)
+    wifi_uart_rx_buf                         0x2000003f   Data          23  system.o(.bss)
+    wifi_uart_tx_buf                         0x20000056   Data          55  system.o(.bss)
+    __initial_sp                             0x20000290   Data           0  keil_startup_hk32f030m.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000c1
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001508, Max: 0x00004000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000014e8, Max: 0x00004000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000c0   Data   RO          751    RESET               keil_startup_hk32f030m.o
+    0x080000c0   0x080000c0   0x00000000   Code   RO         3256  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x080000c0   0x080000c0   0x00000004   Code   RO         3265    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x080000c4   0x080000c4   0x00000004   Code   RO         3268    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         3270    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         3272    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x080000c8   0x080000c8   0x00000008   Code   RO         3273    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x080000d0   0x080000d0   0x00000000   Code   RO         3275    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x080000d0   0x080000d0   0x00000000   Code   RO         3277    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x080000d0   0x080000d0   0x00000004   Code   RO         3266    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x080000d4   0x080000d4   0x0000001c   Code   RO          752    .text               keil_startup_hk32f030m.o
+    0x080000f0   0x080000f0   0x0000002c   Code   RO         3259    .text               mc_p.l(uidiv.o)
+    0x0800011c   0x0800011c   0x00000024   Code   RO         3279    .text               mc_p.l(init.o)
+    0x08000140   0x08000140   0x00000040   Code   RO          705    i.Delay_ms          delay.o
+    0x08000180   0x08000180   0x000000a6   Code   RO         1415    i.GPIO_Init         hk32f030m_gpio.o
+    0x08000226   0x08000226   0x00000044   Code   RO         1416    i.GPIO_PinAFConfig  hk32f030m_gpio.o
+    0x0800026a   0x0800026a   0x00000004   Code   RO         1422    i.GPIO_ResetBits    hk32f030m_gpio.o
+    0x0800026e   0x0800026e   0x00000004   Code   RO         1423    i.GPIO_SetBits      hk32f030m_gpio.o
+    0x08000272   0x08000272   0x00000002   PAD
+    0x08000274   0x08000274   0x00000050   Code   RO          168    i.HKBEEP_Init       beep.o
+    0x080002c4   0x080002c4   0x00000004   Code   RO          123    i.HardFault_Handler  hk32f030m_it.o
+    0x080002c8   0x080002c8   0x00000048   Code   RO          263    i.LED_Blink         led.o
+    0x08000310   0x08000310   0x0000002c   Code   RO          264    i.LED_GPIO_Init     led.o
+    0x0800033c   0x0800033c   0x00000028   Code   RO          292    i.M_GPIO_Init       motor.o
+    0x08000364   0x08000364   0x00000018   Code   RO          294    i.M_forward         motor.o
+    0x0800037c   0x0800037c   0x00000010   Code   RO          295    i.M_stop            motor.o
+    0x0800038c   0x0800038c   0x00000002   Code   RO          124    i.NMI_Handler       hk32f030m_it.o
+    0x0800038e   0x0800038e   0x00000002   PAD
+    0x08000390   0x08000390   0x00000078   Code   RO          706    i.NVIC_SetPriority  delay.o
+    0x08000408   0x08000408   0x00000002   Code   RO          125    i.PendSV_Handler    hk32f030m_it.o
+    0x0800040a   0x0800040a   0x00000002   PAD
+    0x0800040c   0x0800040c   0x00000020   Code   RO         1925    i.RCC_AHBPeriphClockCmd  hk32f030m_rcc.o
+    0x0800042c   0x0800042c   0x00000020   Code   RO         1927    i.RCC_APB1PeriphClockCmd  hk32f030m_rcc.o
+    0x0800044c   0x0800044c   0x00000020   Code   RO         1929    i.RCC_APB2PeriphClockCmd  hk32f030m_rcc.o
+    0x0800046c   0x0800046c   0x0000012c   Code   RO         1937    i.RCC_GetClocksFreq  hk32f030m_rcc.o
+    0x08000598   0x08000598   0x00000024   Code   RO         1945    i.RCC_LSICmd        hk32f030m_rcc.o
+    0x080005bc   0x080005bc   0x00000002   Code   RO          126    i.SVC_Handler       hk32f030m_it.o
+    0x080005be   0x080005be   0x00000002   PAD
+    0x080005c0   0x080005c0   0x00000054   Code   RO            3    i.SetSysClock       system_hk32f030m.o
+    0x08000614   0x08000614   0x000000e8   Code   RO            4    i.SetSysClockToHSI_32M  system_hk32f030m.o
+    0x080006fc   0x080006fc   0x00000038   Code   RO          707    i.SysTick_Config    delay.o
+    0x08000734   0x08000734   0x00000008   Code   RO          127    i.SysTick_Handler   hk32f030m_it.o
+    0x0800073c   0x0800073c   0x00000044   Code   RO            6    i.SystemInit        system_hk32f030m.o
+    0x08000780   0x08000780   0x00000018   Code   RO          708    i.TimingDelay_Decrement  delay.o
+    0x08000798   0x08000798   0x00000018   Code   RO         2884    i.USART_Cmd         hk32f030m_usart.o
+    0x080007b0   0x080007b0   0x00000014   Code   RO         2890    i.USART_GetFlagStatus  hk32f030m_usart.o
+    0x080007c4   0x080007c4   0x0000004e   Code   RO         2891    i.USART_GetITStatus  hk32f030m_usart.o
+    0x08000812   0x08000812   0x00000042   Code   RO         2893    i.USART_ITConfig    hk32f030m_usart.o
+    0x08000854   0x08000854   0x000000d8   Code   RO         2894    i.USART_Init        hk32f030m_usart.o
+    0x0800092c   0x0800092c   0x0000000a   Code   RO         2906    i.USART_ReceiveData  hk32f030m_usart.o
+    0x08000936   0x08000936   0x00000008   Code   RO         2911    i.USART_SendData    hk32f030m_usart.o
+    0x0800093e   0x0800093e   0x00000002   PAD
+    0x08000940   0x08000940   0x00000028   Code   RO          222    i.Uart_Receive      usart.o
+    0x08000968   0x08000968   0x00000020   Code   RO          223    i.Uart_Send         usart.o
+    0x08000988   0x08000988   0x000000a0   Code   RO          224    i.Usart_Init        usart.o
+    0x08000a28   0x08000a28   0x0000001c   Code   RO          607    i.__ARM_common_switch8  protocol.o
+    0x08000a44   0x08000a44   0x0000000e   Code   RO         3283    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x08000a52   0x08000a52   0x00000002   Code   RO         3284    i.__scatterload_null  mc_p.l(handlers.o)
+    0x08000a54   0x08000a54   0x0000000e   Code   RO         3285    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x08000a62   0x08000a62   0x00000002   PAD
+    0x08000a64   0x08000a64   0x00000020   Code   RO          516    i.all_data_update   protocol.o
+    0x08000a84   0x08000a84   0x0000001a   Code   RO          331    i.byte_to_int       mcu_api.o
+    0x08000a9e   0x08000a9e   0x00000002   PAD
+    0x08000aa0   0x08000aa0   0x000000dc   Code   RO          616    i.data_handle       system.o
+    0x08000b7c   0x08000b7c   0x00000040   Code   RO          617    i.data_point_handle  system.o
+    0x08000bbc   0x08000bbc   0x00000024   Code   RO          517    i.dp_download_export_calibrate_handle  protocol.o
+    0x08000be0   0x08000be0   0x00000024   Code   RO          518    i.dp_download_factory_reset_handle  protocol.o
+    0x08000c04   0x08000c04   0x000000b2   Code   RO          519    i.dp_download_handle  protocol.o
+    0x08000cb6   0x08000cb6   0x00000024   Code   RO          520    i.dp_download_light_handle  protocol.o
+    0x08000cda   0x08000cda   0x0000003c   Code   RO          521    i.dp_download_manual_feed_handle  protocol.o
+    0x08000d16   0x08000d16   0x0000001c   Code   RO          522    i.dp_download_meal_plan_handle  protocol.o
+    0x08000d32   0x08000d32   0x0000003e   Code   RO          523    i.dp_download_quick_feed_handle  protocol.o
+    0x08000d70   0x08000d70   0x00000024   Code   RO          524    i.dp_download_slow_feed_handle  protocol.o
+    0x08000d94   0x08000d94   0x00000024   Code   RO          525    i.dp_download_switch_handle  protocol.o
+    0x08000db8   0x08000db8   0x0000003c   Code   RO          526    i.dp_download_unit_handle  protocol.o
+    0x08000df4   0x08000df4   0x00000024   Code   RO          527    i.dp_download_voice_times_handle  protocol.o
+    0x08000e18   0x08000e18   0x00000024   Code   RO          528    i.dp_download_weight_calibrate_handle  protocol.o
+    0x08000e3c   0x08000e3c   0x0000001c   Code   RO          618    i.get_check_sum     system.o
+    0x08000e58   0x08000e58   0x0000002c   Code   RO          619    i.get_dowmload_dpid_index  system.o
+    0x08000e84   0x08000e84   0x00000004   Code   RO          529    i.get_download_cmd_total  protocol.o
+    0x08000e88   0x08000e88   0x00000010   Code   RO          620    i.get_mcu_wifi_mode  system.o
+    0x08000e98   0x08000e98   0x00000038   Code   RO          621    i.heat_beat_check   system.o
+    0x08000ed0   0x08000ed0   0x00000020   Code   RO         3235    i.main              main.o
+    0x08000ef0   0x08000ef0   0x00000068   Code   RO          334    i.mcu_dp_bool_update  mcu_api.o
+    0x08000f58   0x08000f58   0x00000058   Code   RO          335    i.mcu_dp_enum_update  mcu_api.o
+    0x08000fb0   0x08000fb0   0x00000070   Code   RO          337    i.mcu_dp_raw_update  mcu_api.o
+    0x08001020   0x08001020   0x00000078   Code   RO          339    i.mcu_dp_value_update  mcu_api.o
+    0x08001098   0x08001098   0x00000006   Code   RO          340    i.mcu_get_dp_download_bool  mcu_api.o
+    0x0800109e   0x0800109e   0x00000006   Code   RO          341    i.mcu_get_dp_download_enum  mcu_api.o
+    0x080010a4   0x080010a4   0x0000000e   Code   RO          342    i.mcu_get_dp_download_value  mcu_api.o
+    0x080010b2   0x080010b2   0x0000004c   Code   RO          349    i.my_memcpy         mcu_api.o
+    0x080010fe   0x080010fe   0x0000001c   Code   RO          353    i.my_strlen         mcu_api.o
+    0x0800111a   0x0800111a   0x00000002   PAD
+    0x0800111c   0x0800111c   0x000000d8   Code   RO          622    i.product_info_update  system.o
+    0x080011f4   0x080011f4   0x00000024   Code   RO          623    i.set_wifi_uart_buffer  system.o
+    0x08001218   0x08001218   0x00000010   Code   RO          624    i.set_wifi_uart_byte  system.o
+    0x08001228   0x08001228   0x0000003c   Code   RO          625    i.take_byte_rxbuff  system.o
+    0x08001264   0x08001264   0x00000058   Code   RO          355    i.uart_receive_input  mcu_api.o
+    0x080012bc   0x080012bc   0x0000000c   Code   RO          530    i.uart_transmit_output  protocol.o
+    0x080012c8   0x080012c8   0x0000002c   Code   RO          356    i.wifi_protocol_init  mcu_api.o
+    0x080012f4   0x080012f4   0x0000000c   Code   RO          531    i.wifi_test_result  protocol.o
+    0x08001300   0x08001300   0x000000f0   Code   RO          357    i.wifi_uart_service  mcu_api.o
+    0x080013f0   0x080013f0   0x00000028   Code   RO          626    i.wifi_uart_write_data  system.o
+    0x08001418   0x08001418   0x00000044   Code   RO          627    i.wifi_uart_write_frame  system.o
+    0x0800145c   0x0800145c   0x0000001c   Code   RO          628    i.with_data_rxbuff  system.o
+    0x08001478   0x08001478   0x00000028   Data   RO          532    .constdata          protocol.o
+    0x080014a0   0x080014a0   0x00000028   Data   RO         1951    .constdata          hk32f030m_rcc.o
+    0x080014c8   0x080014c8   0x00000020   Data   RO         3281    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080014e8, Size: 0x00000290, Max: 0x00000800, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x080014e8   0x00000004   Data   RW            7    .data               system_hk32f030m.o
+    0x20000004   0x080014ec   0x00000002   Data   RW          358    .data               mcu_api.o
+    0x20000006   0x080014ee   0x00000002   PAD
+    0x20000008   0x080014f0   0x0000000d   Data   RW          630    .data               system.o
+    0x20000015   0x080014fd   0x00000003   PAD
+    0x20000018   0x08001500   0x00000004   Data   RW          709    .data               delay.o
+    0x2000001c   0x08001504   0x00000002   Data   RW         3236    .data               main.o
+    0x2000001e   0x08001506   0x00000002   PAD
+    0x20000020        -       0x0000006d   Zero   RW          629    .bss                system.o
+    0x2000008d   0x08001506   0x00000003   PAD
+    0x20000090        -       0x00000200   Zero   RW          749    STACK               keil_startup_hk32f030m.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        80         10          0          0          0        430   beep.o
+       264         36          0          4          0       7715   delay.o
+       242          0          0          0          0       2695   hk32f030m_gpio.o
+        18          0          0          0          0       2023   hk32f030m_it.o
+       432         44         40          0          0       3501   hk32f030m_rcc.o
+       422         12          0          0          0       5033   hk32f030m_usart.o
+        28          8        192          0        512        636   keil_startup_hk32f030m.o
+       116          8          0          0          0        980   led.o
+        32          0          0          2          0        618   main.o
+       952         64          0          2          0       8698   mcu_api.o
+        80         12          0          0          0       1127   motor.o
+       728         32         40          0          0      10020   protocol.o
+       892        144          0         13        109       8802   system.o
+       384         40          0          4          0     171919   system_hk32f030m.o
+       232         28          0          0          0       1368   usart.o
+
+    ----------------------------------------------------------------------
+      4916        438        304         32        624     225565   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        14          0          0          7          3          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        44          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+       132         16          0          0          0        140   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       130         16          0          0          0        140   mc_p.l
+
+    ----------------------------------------------------------------------
+       132         16          0          0          0        140   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      5048        454        304         32        624     222513   Grand Totals
+      5048        454        304         32        624     222513   ELF Image Totals
+      5048        454        304         32          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 5352 (   5.23kB)
+    Total RW  Size (RW Data + ZI Data)               656 (   0.64kB)
+    Total ROM Size (Code + RO Data + RW Data)       5384 (   5.26kB)
+
+==============================================================================
+
