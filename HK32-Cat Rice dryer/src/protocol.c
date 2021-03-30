@@ -220,6 +220,7 @@ static unsigned char dp_download_meal_plan_handle(const unsigned char value[], u
 #include "led.h"
 #include "delay.h"
 #include "motor.h"
+#include "beep.h"
 
 static unsigned char dp_download_quick_feed_handle(const unsigned char value[], unsigned short length)
 {
@@ -255,14 +256,17 @@ static unsigned char dp_download_manual_feed_handle(const unsigned char value[],
     //示例:当前DP类型为VALUE
     unsigned char ret;
     unsigned long manual_feed;
-    
+
     manual_feed = mcu_get_dp_download_value(value,length);
     
     //VALUE类型数据处理
-    if(manual_feed >= 1) {
+    if(manual_feed > 1 ) {
+				PowerOn();
         M_forward();
 				Delay_ms(300*manual_feed);
 				M_stop();
+				Delay_ms(2000);
+				PowerOff();
     }
     
     //处理完DP数据后应有反馈

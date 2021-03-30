@@ -16,14 +16,13 @@
 uint8_t QuickFeed_State = 1;						//快速喂食状态
 uint8_t ManualFeed_State = 1;						//手动喂食状态
 
-	
 int main(void)
 {	 
-	LED_GPIO_Init();					// LED引脚初始化
-	M_GPIO_Init();						// 电机控制引脚初始化
-	HKBEEP_Init();						// 蜂鸣器初始化
-	Usart_Init();							// 串口初始化
-	wifi_protocol_init();			// wifi初始化
+	LED_GPIO_Init();											// LED引脚初始化
+	M_GPIO_Init();												// 电机控制引脚初始化
+	HKBEEP_Init();												// 蜂鸣器初始化
+	Usart_Init();													// 串口初始化
+	wifi_protocol_init();									// wifi初始化
 
 	while(1)
 	{

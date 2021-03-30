@@ -9,6 +9,9 @@ void SetPrescaler(uint8_t BEEP_Prescaler);
 void Sound(uint16_t  frq);
 void play_music(void);
 void Beep_1s(void);
+
+void PowerOn(void);
+void PowerOff(void);
 	
 #endif
 

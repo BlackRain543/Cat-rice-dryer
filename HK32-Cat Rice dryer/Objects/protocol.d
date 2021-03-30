@@ -9,3 +9,4 @@
 .\objects\protocol.o: E:\Program Files\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\protocol.o: .\inc\delay.h
 .\objects\protocol.o: .\inc\motor.h
+.\objects\protocol.o: .\inc\beep.h

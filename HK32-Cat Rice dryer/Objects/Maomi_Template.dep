@@ -29,8 +29,8 @@ I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_beep.h)(0x60606ED9)
 F (..\HK32F030M_Project\src\hk32f030m_it.c)(0x60608C73)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\hk32f030m_it.o --omf_browse .\objects\hk32f030m_it.crf --depend .\objects\hk32f030m_it.d)
 I (.\inc\main.h)(0x5E005923)
 I (.\inc\hk32f030m_it.h)(0x5E95336F)
-F (.\src\beep.c)(0x6060AE13)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\beep.o --omf_browse .\objects\beep.crf --depend .\objects\beep.d)
-I (.\inc\beep.h)(0x60609C2C)
+F (.\src\beep.c)(0x60630258)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\beep.o --omf_browse .\objects\beep.crf --depend .\objects\beep.d)
+I (.\inc\beep.h)(0x60630246)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_beep.h)(0x60606ED9)
@@ -150,7 +150,7 @@ I (E:\Program Files\Keil5\ARM\ARMCC\include\string.h)(0x599ECD2C)
 I (.\inc\protocol.h)(0x606034F6)
 I (.\inc\system.h)(0x606034F6)
 I (.\inc\mcu_api.h)(0x606034F6)
-F (.\src\protocol.c)(0x6061CBCB)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\protocol.o --omf_browse .\objects\protocol.crf --depend .\objects\protocol.d)
+F (.\src\protocol.c)(0x60630235)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\protocol.o --omf_browse .\objects\protocol.crf --depend .\objects\protocol.d)
 I (.\inc\wifi.h)(0x60605522)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -161,6 +161,7 @@ I (.\inc\led.h)(0x60609F03)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\stdint.h)(0x599ECD2E)
 I (.\inc\delay.h)(0x6060A324)
 I (.\inc\motor.h)(0x6060335B)
+I (.\inc\beep.h)(0x60630246)
 F (.\src\system.c)(0x60603A6E)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\system.o --omf_browse .\objects\system.crf --depend .\objects\system.d)
 I (.\inc\wifi.h)(0x60605522)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
@@ -684,7 +685,7 @@ I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_tim.h)(0x5E5DD078)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_usart.h)(0x5E6A127D)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_awu.h)(0x5E5DC37C)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_beep.h)(0x60606ED9)
-F (.\main\main.c)(0x6061CA7F)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main\main.c)(0x60630267)(--c99 -c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\HK32F030M\CMSIS\HK32F030M\Include -I ..\HK32F030M\HK32F030M_Lib\inc -I ..\HK32F030M\CMSIS\CM0 -I .\inc -I ..\HK32F030M\HK32F030M_Lib\src-I.\RTE\_Template-I"E:\Program Files\Keil5\ARM\CMSIS\Include"-D__UVISION_VERSION="525" -DHK32F030M -DHK32F030MJ4M6-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\inc\main.h)(0x5E005923)
 I (E:\Program Files\Keil5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (..\HK32F030M\CMSIS\HK32F030M\Include\hk32f030m.h)(0x5F5AEBB5)
@@ -712,7 +713,7 @@ I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_usart.h)(0x5E6A127D)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_wwdg.h)(0x5E5DD1BB)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_awu.h)(0x5E5DC37C)
 I (..\HK32F030M\HK32F030M_Lib\inc\hk32f030m_beep.h)(0x60606ED9)
-I (.\inc\beep.h)(0x60609C2C)
+I (.\inc\beep.h)(0x60630246)
 I (.\inc\usart.h)(0x60618D00)
 I (.\inc\led.h)(0x60609F03)
 I (.\inc\motor.h)(0x6060335B)

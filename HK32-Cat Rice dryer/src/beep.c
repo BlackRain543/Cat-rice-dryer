@@ -38,7 +38,7 @@ void SetPrescaler(uint8_t BEEP_Prescaler)
 void Beep_1s(void){
 	for(uint16_t i = 0;i < 385;i++){
 			Sound(440);
-			Delay_10us(20);	
+			Delay_10us(10);	
 	}	
 	Sound(1);
 }
@@ -55,6 +55,52 @@ void Sound(uint16_t  frq){
 		Delay_10us(time);
 	}else{
 		Delay_10us(100);
+	}
+}
+
+void PowerOn(void){
+	//              	 低7  1   2   3   4   5   6   7  高1 高2 高3 高4 高5 高6 高7 高1 高2  高3  不发音
+	uint16_t tone[20] = {247,262,294,330,349,392,440,494,523,587,659,698,784,880,988,1046,1175,1318,1,554};//音频数据表
+	
+	/*---开机音乐---*/
+	//音调
+	uint8_t music[]	= {	5,8,9,10,  6, 5,9,10,12,13, 9,7,3,6,19, 18};
+	
+	//节拍		2:半拍；4：一拍
+	uint8_t time[] 	= { 4,4,4,8,  8, 4,4,4,4,8, 4,4,2,2,10, 8};	
+		
+		
+	uint32_t yanshi;
+	uint16_t i,e;
+	yanshi = 10;
+								
+	for(i=0;i<sizeof(music)/sizeof(music[0]);i++){
+		for(e=0;e<((uint16_t)time[i]*3/4)*tone[music[i]]/yanshi;e++){
+			Sound((uint32_t)tone[music[i]]);
+		}	
+	}
+}
+
+void PowerOff(void){
+	//音频数据表:       低7  1   2   3   4   5   6   7  高1 高2 高3 高4 高5 高6 高7 高1 高2  高3  不发音
+	uint16_t tone[19] = {247,262,294,330,349,392,440,494,523,587,659,698,784,880,988,1046,1175,1318,1};//
+	
+	/*---关机音乐---*/
+	//音调
+	uint8_t music[]	= {	8,5,1,2, 18};
+	
+	//节拍		2:半拍；4：一拍
+	uint8_t time[] 	= { 4,4,4,8,  8};	
+		
+		
+	uint32_t yanshi;
+	uint16_t i,e;
+	yanshi = 10;
+								
+	for(i=0;i<sizeof(music)/sizeof(music[0]);i++){
+		for(e=0;e<((uint16_t)time[i]*1/2)*tone[music[i]]/yanshi;e++){
+			Sound((uint32_t)tone[music[i]]);
+		}	
 	}
 }
 
@@ -117,8 +163,8 @@ void play_music(void){
 										2,2,2,4,2,4,2,2,12};	*/
 
 		/*---打上花火---*/
-	//音调
-	/*uint8_t music[]	= {	10,12,10, 9,8,6,8,9,18, 10,12,10, 9,8,6,8,8,18,
+	/*//音调
+	uint8_t music[]	= {	10,12,10, 9,8,6,8,9,18, 10,12,10, 9,8,6,8,8,18,
 											10,12,10, 9,18,10,12,12, 13,12,11,10,18, 
 		
 											10,12,10, 9,8,6,8,9,18, 10,12,10, 9,8,6,8,8,18, 
